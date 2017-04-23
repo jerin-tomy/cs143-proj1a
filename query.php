@@ -22,7 +22,7 @@
 <table> 
 <?php
 	
-  $mysqli = new mysqli("127.0.0.1", "cs143", "", "CS143");
+  $mysqli = new mysqli("localhost:1438", "cs143", "", "CS143");
   $result = $mysqli->query($comment);
   while ($row = $result->fetch_assoc()){
 	echo "<tr>";

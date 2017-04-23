@@ -161,9 +161,75 @@ ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint f
 */
 
 
-
-
 ---------------------------
 -- Check Constaints
 ---------------------------
+
+/*
+The id of the tuple we are trying to insert into the Movie table 
+is 0. This would violate the CHECK constraint of id > 0.
+*/
+INSERT INTO Movie
+VALUES(0, 'Bee Movie', 2007, 'PG', 'Dreamworks Animation')
+
+
+/*
+The title of the tuple we are trying to insert into the Movie table 
+is NULL. This would violate the CHECK constraint of title IS NOT NULL.
+*/
+INSERT INTO Movie
+VALUES(99999, NULL, 2007, 'PG', 'Dreamworks Animation')
+
+
+/*
+The id of the tuple we are trying to insert into the Actor table 
+is 0. This would violate the CHECK constraint of id > 0.
+*/
+INSERT INTO Actor
+VALUES(0, 'Tomy', 'Jerin', 'Male', 19970223, NULL);
+
+
+/*
+The dob of the tuple we are trying to insert into the Actor table 
+is NULL.  This would violate the CHECK constraint of dob IS NOT NULL.
+*/
+INSERT INTO Actor
+VALUES(99999, 'Tomy', 'Jerin', 'Male', NULL, NULL);
+
+
+/*
+The first name of the tuple we are trying to insert into the Actor table 
+is NULL.  This would violate the CHECK constraint of first IS NOT NULL.
+*/
+INSERT INTO Actor
+VALUES(0, 'Tomy', NULL, 'Male', 19970223, NULL);
+
+
+/*
+The id of the tuple we are trying to insert into the Director table 
+is 0. This would violate the CHECK constraint of id > 0.
+*/
+INSERT INTO Director
+VALUES(0,'Wong', 'Matthew', 19970223, NULL);
+
+
+/*
+The dob of the tuple we are trying to insert into the Director table 
+is NULL. This would violate the CHECK constraint of dob IS NOT NULL.
+*/
+INSERT INTO Director
+VALUES(99999,'Wong', 'Matthew', NULL, NULL);
+
+
+/*
+The first name of the tuple we are trying to insert into the Director table 
+is NULL. This would violate the CHECK constraint of first IS NOT NULL.
+*/
+INSERT INTO Director
+VALUES(99999,'Wong', NULL, 19970223, NULL);
+
+
+
+
+
 

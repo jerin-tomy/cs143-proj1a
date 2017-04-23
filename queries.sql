@@ -17,7 +17,7 @@ SELECT COUNT(*)
 FROM (SELECT aid
       FROM MovieActor
       GROUP BY mid
-      HAVING count(*)>1);
+      HAVING count(*)>1) as actors_in_multiple_movies;
 
 -- Title of movies that sell more than 1,000,000 tickets
 SELECT title
