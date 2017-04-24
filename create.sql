@@ -2,7 +2,7 @@
 
 CREATE TABLE Movie (
 	id int,
-	title varchar(1000),
+	title varchar(100),
 	year int,
 	rating varchar(10),
 	company varchar(50),

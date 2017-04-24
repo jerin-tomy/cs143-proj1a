@@ -170,7 +170,7 @@ The id of the tuple we are trying to insert into the Movie table
 is 0. This would violate the CHECK constraint of id > 0.
 */
 INSERT INTO Movie
-VALUES(0, 'Bee Movie', 2007, 'PG', 'Dreamworks Animation')
+VALUES(0, 'Bee Movie', 2007, 'PG', 'Dreamworks Animation');
 
 
 /*
@@ -178,7 +178,7 @@ The title of the tuple we are trying to insert into the Movie table
 is NULL. This would violate the CHECK constraint of title IS NOT NULL.
 */
 INSERT INTO Movie
-VALUES(99999, NULL, 2007, 'PG', 'Dreamworks Animation')
+VALUES(99999, NULL, 2007, 'PG', 'Dreamworks Animation');
 
 
 /*

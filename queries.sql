@@ -37,7 +37,7 @@ WHERE d.id = md.did
 GROUP BY d.id
 ORDER BY Total_Income desc;
 
--- List Actors and their average IMDB ratings based on the ratings from all of their movies if the value is greater than 90.
+-- List Actors and the average of their movies' average IMDB ratings if the value is greater than 90.
 SELECT concat(a.first, ' ', a.last) as Name, avg(mr.imdb) as Avg_IMDB
 FROM Actor as a, MovieActor as ma, MovieRating as mr
 WHERE a.id = ma.aid
